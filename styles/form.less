@@ -1,0 +1,48 @@
+@import "variables.less";
+.form-container{
+   
+    padding: 1rem;
+    border: 1px #ccc solid;
+    display: flex;
+    flex-direction: column;
+    form{
+        div.form-group{
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            padding: 1rem 0;
+            div.input-group{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                label{
+                    min-width: 8rem;
+                }
+                input{
+                    flex-grow: 1;
+                    border: 1px #ccc solid;
+                    padding: .333rem;
+                }
+            }
+            div.validation{
+                margin-top: .1rem;
+                margin-left: 8rem;
+                background-color: @invalid-red;
+                color: #fff;
+                display: none;
+                align-content: center;
+                padding: .333rem;
+            }
+            &.invalid{
+                .validation{
+                    display: flex;
+                }
+                .input-group input{
+                    border-color: @invalid-red;
+                    background: lighten(@invalid-red, 50);
+                }
+            }
+        }
+    }
+}

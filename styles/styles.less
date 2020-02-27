@@ -1,0 +1,254 @@
+@import "variables.less";
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: #555;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main-row{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 64rem;
+    display: flex;
+}
+
+#dpb-logo{
+    height: 100%;
+}
+
+header{
+    height: 6rem;
+    background-color: white;
+  
+    .container{
+        width: 64rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .tel{
+            span{
+                font-size: 1.25rem;
+                color: #555;
+                display: block;
+            }
+            font-size: 2.5rem;
+            color: @brand-color;
+        }
+    }
+}
+
+#hero{
+    background: url(/images/istockphoto-900727014-1024x1024.jpg);
+    background-size: cover;
+    background-position-y: center;
+   
+    .container{
+        justify-content: flex-end;
+        padding: 1rem;
+        .form{
+            h2{
+                margin: 0;
+                font-size: 2rem;
+                font-weight: normal;
+                color: #37b6ff;
+            }
+            background-color: #ffffffd4;
+            box-shadow: 0 .0 .5rem .5rem rgba(0, 0, 0, .5);
+            height: 100%;
+            width: 47%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            .form-group{
+                margin: 0;
+                input, textarea{
+                    border: 1px solid #999;
+                    padding: .5rem;
+                    width: 100%;
+                    color: #555;
+                }
+               
+                label{
+                    display: block;
+                }
+                &.question-form-group{
+                    flex-grow: 1;
+                }
+                button{
+                    background-color: #009900;
+                    color: #fff;
+                    padding: .5rem 1rem;
+                    border: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    transition: .55s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &::after{
+                        content:"";
+                        display: block;
+                        width: 2rem;
+                        height: 2rem;
+                        background-image: url(/images/arrow_forward-white.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        margin-left: 1rem;
+                    }
+                    &:hover{
+                        background-color:  #00990077;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#mpaq{
+    .container{
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        img{
+            width: 47%;
+            height: auto;
+        }
+        #testimonial{
+            &::before{
+                content: open-quote;
+                font-size:6rem;
+                line-height: 1;
+                display: flex;
+                justify-content: center;
+                background-color: @mpaq-red;
+                position: absolute;
+                height: 3rem;
+                width: 3rem;
+                top:0;
+                left: 0;
+                vertical-align: top;
+                font-style: normal;
+            }
+
+            position: relative;
+            background-color: @mpaq-blue;
+            color: #fff;
+            padding: 0 4.5rem;
+            width: 47%;
+            font-style: italic;
+            &::after{
+                content: close-quote;
+                font-size:6rem;
+                line-height: 1;
+                display: flex;
+                justify-content: center;
+                background-color: @mpaq-red;
+                position: absolute;
+                height: 3rem;
+                width: 3rem;
+                bottom:0;
+                right: 0;
+                vertical-align: top;
+                font-style: normal;
+            }
+        }
+    }
+}
+
+#about-services{
+    background-color:@light;
+    padding: 1rem;
+    .container{
+       align-items: center;
+       justify-content: space-between;
+       padding: 1rem;
+        #about{
+            width: 47%;
+        }
+        #services{
+            margin: 1rem;
+            margin-right: 0;
+            padding: 1rem;
+            background-color:@brand-color;
+            color: #fff;
+            width: 47%;
+            h2{
+                background-color: @mpaq-blue;
+                margin: -1rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                position: relative;
+                &::after{
+                    content: "";
+                    background-image: url(/images/build-24px.svg);
+                    background-repeat: no-repeat;
+                    background-size: 70%;
+                    background-position: center center;
+                    background-color: @mpaq-red;
+                    height: 100%;
+                    width: 4rem;
+                    display: inline-block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+            ul{
+                list-style: none;
+                position: relative;
+                margin: 0;
+                padding: 0 0 0 2rem;
+                li{
+                    &::before{
+                        content: "";
+                        background-image: url(/images/arrow_forward-24px.svg);
+                        display: flex;
+                        height: 1.7rem;
+                        width: 1.7rem;
+                        position: absolute;
+                        left: 0;
+                    }
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+}
+.licenced{
+    .container{
+        justify-content: space-between;
+        padding: 1rem;
+        align-items: center;
+    }
+}
+footer{
+    background-color:@mpaq-blue;
+    color: @light;
+    .container{
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        .tel{
+            span{
+                font-size: 1.25rem;
+                color:@light;
+                display: block;
+            }
+            font-size: 2.5rem;
+            color: @light;
+        }
+    }
+}
