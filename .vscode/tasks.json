@@ -7,6 +7,12 @@
             "label": "echo",
             "type": "shell",
             "command": "echo Hello"
+        },
+        {
+            "label": "build",
+            "group": "build",
+            "type": "shell",
+            "command": "npm run dev"
         }
     ]
 }

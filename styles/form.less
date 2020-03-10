@@ -45,4 +45,51 @@
             }
         }
     }
+
+    .result-panel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &.progress{
+            &::before, &::after{
+                content: "";
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                border: 10px solid #ccc;
+                border-radius: 50%;
+                transform: translate(50% 50%);
+            }
+            &::after{
+                border-color: transparent;
+                border-left-color: #999;
+                animation-name: spin;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            @keyframes spin {
+                form{ transform: rotate(0deg);}
+                to{ transform: rotate(360deg);}
+            }
+           
+        }
+
+        p{
+            text-align: center;
+        }
+
+        .form-btn{
+            padding: 6px 12px;
+            background-color: #ccc;
+            border: 1px solid #999;
+            transition: background-color .25s;
+            &:hover{
+                background-color: #bbb;
+            }
+        }
+    }
 }
