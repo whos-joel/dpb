@@ -1,0 +1,68 @@
+@import "variables.less";
+
+#mpaq{
+    .container{
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        img{
+            width: 47%;
+            height: auto;
+        }
+        #testimonial{
+            &::before{
+                content: open-quote;
+                font-size:6rem;
+                line-height: 1;
+                display: flex;
+                justify-content: center;
+                background-color: @mpaq-red;
+                position: absolute;
+                height: 3rem;
+                width: 3rem;
+                top:0;
+                left: 0;
+                vertical-align: top;
+                font-style: normal;
+            }
+
+            position: relative;
+            background-color: @mpaq-blue;
+            color: #fff;
+            padding: 0 4.5rem;
+            width: 47%;
+            font-style: italic;
+            &::after{
+                content: close-quote;
+                font-size:6rem;
+                line-height: 1;
+                display: flex;
+                justify-content: center;
+                background-color: @mpaq-red;
+                position: absolute;
+                height: 3rem;
+                width: 3rem;
+                bottom:0;
+                right: 0;
+                vertical-align: top;
+                font-style: normal;
+            }
+        }
+    }
+}
+
+@media(max-width:@mobile-width){
+    #mpaq{
+        .container{
+            flex-direction: column;
+            img{
+                width: 100%;
+            }
+            #testimonial{           
+                width: 100%;
+            }
+        }
+    }
+    
+}

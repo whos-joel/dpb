@@ -1,0 +1,106 @@
+@import "variables.less";
+
+#hero{
+    
+    background-size: cover;
+    background-position-y: center;
+
+    &.image-1{
+        background-image: url(/images/bathroom-1.jpg);
+    }
+    &.image-2{
+        background-image: url(/images/bathroom-2.jpg);
+    }
+    &.image-3{
+        background-image: url(/images/bathroom-3.jpg);
+    }
+    &.image-4{
+        background-image: url(/images/bathroom-4.jpg);
+    }
+    &.image-5{
+        background-image: url(/images/bathroom-5.jpg);
+    }
+    &.image-6{
+        background-image: url(/images/bathroom-6.jpg);
+    }
+    &.image-7{
+        background-image: url(/images/bathroom-7.jpg);
+    }
+    &.image-8{
+        background-image: url(/images/bathroom-8.jpg);
+    }
+    &.image-9{
+        background-image: url(/images/bathroom-9.jpg);
+    }
+   
+    .container{
+        justify-content: flex-end;
+        padding: 1rem;
+        .form{
+            h2{
+                margin: 0;
+                font-size: 2rem;
+                font-weight: normal;
+                color: #37b6ff;
+            }
+            background-color: #ffffffd4;
+            box-shadow: 0 .0 .5rem .5rem rgba(0, 0, 0, .5);
+            height: 100%;
+            width: 47%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            .form-group{
+                margin: 0;
+                input, textarea{
+                    border: 1px solid #999;
+                    padding: .5rem;
+                    width: 100%;
+                    color: #555;
+                }
+               
+                label{
+                    display: block;
+                }
+                &.question-form-group{
+                    flex-grow: 1;
+                }
+                button{
+                    background-color: #009900;
+                    color: #fff;
+                    padding: .5rem 1rem;
+                    border: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    transition: .55s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &::after{
+                        content:"";
+                        display: block;
+                        width: 2rem;
+                        height: 2rem;
+                        background-image: url(/images/arrow_forward-white.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        margin-left: 1rem;
+                    }
+                    &:hover{
+                        background-color:  #00990077;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:@mobile-width){
+    #hero{
+        .container{
+            .form{
+                width: 100%;
+            }
+        }
+    }
+}

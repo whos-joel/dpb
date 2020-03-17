@@ -1,0 +1,52 @@
+@import "variables.less";
+
+header{
+    height: 6rem;
+    background-color: white;
+  
+    .container{
+        width: 64rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        #logo-link{
+            height: 100%;
+            width: auto;
+            display: block;
+        }
+
+        #dpb-logo{
+            height: 100%;
+        }
+
+        .tel{
+            span:first-child{
+                font-size: 1.25rem;
+                color: #555;
+                display: block;
+            }
+            font-size: 2.5rem;
+            color: @brand-color;
+            text-decoration: none;
+        }
+    }
+}
+
+@media(max-width:34rem){
+    header{    
+        .container{         
+            .tel{
+                background-image: url("/images/phone.svg");
+                width: 3.5rem;
+                height: 3.5rem;
+                display: block;
+                background-size: contain;
+
+                span, span:first-child{
+                    display: none;
+                }
+            }
+        }
+    }
+}
