@@ -1,0 +1,78 @@
+@import "variables.less";
+
+#about-services{
+    background-color:@light;
+    padding: 1rem;
+    .container{
+       align-items: center;
+       justify-content: space-between;
+       padding: 1rem;
+        #about{
+            width: 47%;
+        }
+        #services{
+            margin: 1rem;
+            margin-right: 0;
+            padding: 1rem;
+            background-color:@brand-color;
+            color: #fff;
+            width: 47%;
+            h2{
+                background-color: @mpaq-blue;
+                margin: -1rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                position: relative;
+                &::after{
+                    content: "";
+                    background-image: url(/images/build-24px.svg);
+                    background-repeat: no-repeat;
+                    background-size: 70%;
+                    background-position: center center;
+                    background-color: @mpaq-red;
+                    height: 100%;
+                    width: 4rem;
+                    display: inline-block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+            ul{
+                list-style: none;
+                position: relative;
+                margin: 0;
+                padding: 0 0 0 2rem;
+                li{
+                    &::before{
+                        content: "";
+                        background-image: url(/images/arrow_forward-24px.svg);
+                        display: flex;
+                        height: 1.7rem;
+                        width: 1.7rem;
+                        position: absolute;
+                        left: 0;
+                    }
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: @mobile-width){
+    #about-services{
+       
+        .container{
+           flex-direction: column;
+            #about{
+                width: 100%;
+            }
+            #services{
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+    
+}
