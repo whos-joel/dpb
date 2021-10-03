@@ -6,11 +6,12 @@
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
+        align-items: stretch;
         img{
             width: 47%;
             height: auto;
         }
-        #testimonial{
+        .testimonial{
             &::before{
                 content: open-quote;
                 font-size:6rem;
@@ -59,8 +60,12 @@
             img{
                 width: 100%;
             }
-            #testimonial{           
+           .testimonial{           
                 width: 100%;
+                
+            }
+            div:first-child{
+                margin-bottom: 1rem;
             }
         }
     }
