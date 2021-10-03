@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Azure Static Website Deploy
+        uses: feeloor/azure-static-website-deploy@master
+        with:
+          SOURCE_DIR: "$web"  
+          AZURE_CLIENT_ID: "1128f95d-80ed-4f25-b94b-18a8dd40887d2"
+          AZURE_TENANT_ID: "262b1ce8-a817-4a56-8626-66b5b6a20b35"
+          AZURE_SECRET: ${{ secrets.AZURE_SECRET }}
+          AZURE_SUBSCRIPTION_ID: "e6e5b570-5e59-4f89-989b-b2bef40a0e9f"
+          AZURE_STORAGE_ACCOUNT_NAME: "dpbweb"
+          AZURE_INDEX_DOCUMENT_NAME: "index.html"    
+          AZURE_ERROR_DOCUMENT_NAME: "error.html"
